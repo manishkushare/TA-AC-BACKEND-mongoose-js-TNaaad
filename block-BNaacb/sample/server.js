@@ -2,7 +2,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 // coonect to mongodb using mongoose
-mongoose.connect("mongodb://lcoalhost:27017/samplearticle",(err)=>console.log(err? err:"Connected to database"));
+mongoose.connect(" mongodb://127.0.0.1:27017/samplearticle", { useNewUrlParser: true , useUnifiedTopology: true} ,
+(err)=> console.log(err? err:"Connected to database"));
 // install express app
 const app = express();
 // express middleeware
@@ -18,4 +19,6 @@ app.use((req,res,next)=>{
 app.use((err,req,res,next)=>{
     res.send(err);
 });
-
+app.listen(7000,()=>{
+    console.log("listening on port 3k");
+})
