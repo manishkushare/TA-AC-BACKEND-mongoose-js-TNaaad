@@ -2,7 +2,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 // now you need to coonect the aplication to mongoDB using mongoose before mouting express aplication 
-mongoose.connect( "mongodb://localhost:27017", { useNewUrlParser: true , useUnifiedTopology: true},((err) => err? console.log(err):console.log("connected to database")));
+mongoose.connect( "mongodb://localhost:27017/sample", { useNewUrlParser: true , useUnifiedTopology: true},((err) => err? console.log(err):console.log("connected to database")));
 
 // mount express app on server
 const app = express();
