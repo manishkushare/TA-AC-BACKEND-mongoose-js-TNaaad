@@ -1,7 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const user = require('User');
+const user = require('./models/user');
 console.log(user);
+console.dir(user)
 // connecting application to mongodb using mongoose
 mongoose.connect('mongodb://127.0.0.1:27017/sample',(err)=> console.log(err? err:"Connected to database"));
 const app = express();
