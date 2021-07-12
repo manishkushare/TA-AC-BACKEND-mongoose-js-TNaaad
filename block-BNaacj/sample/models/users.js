@@ -8,7 +8,7 @@ const userSchema = new Schema({
         maxlength : 15
     },
     createdAt : {
-        type: String,
-        default : new Date();
+        type: Date,
+        default : new Date(),
     }
 })
